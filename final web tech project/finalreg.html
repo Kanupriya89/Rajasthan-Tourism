@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<div id="menu">
+<ul>
+<li><a href="newsalign.html">HOME</a></li>
+<script type="text/javascript">
+function validateForm() {
+
+var x=document.forms["myForm"]["name"].value;
+if (x==null || x=="")
+ {
+  alert("Name must be filled out");
+  return false;
+ }
+
+var y=document.forms["myForm"]["password"].value;
+if (y==null || y=="") {
+  alert("Password name must be filled out");
+  return false;
+}
+var z=document.forms["myForm"]["email"].value;
+if (z==null || z=="") {
+  alert("Email id name must be filled out");
+  return false;
+}
+var a=document.forms["myForm"]["phoneno"].value;
+if (a==null || a=="" ||a==/^[a-zA-Z]+$/) {
+  alert("Phone no. name must be filled out");
+  return false;
+  }
+var re = /^[a-zA-Z0-9!@#$%^&*]{6,16}$/;
+if(!y.match(re))   
+{  
+alert('password should have a special character,alphabets and number!');  
+return false;  
+}   
+var e = /^[0-9]{10}$/;
+if(!a.match(e))
+{
+alert('phone no should have 10 digits');
+return false;
+}
+}
+</script>
+</head>
+
+<body align="left">
+<center>
+<head><b>REGISTER</b></head>
+</center>
+
+
+
+<form name="myForm" action="demo_form.asp"  method="post">
+<style>
+body{background-image:url(adi.jpg); color:white;}
+
+
+
+input[type=submit] {
+    width: 25%;
+    background-color:black;
+    color: pink;
+    padding: 8px 8px;
+    margin: 8px 0;
+    border:solid;
+    border-radius:2px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color:grey;
+}
+
+
+</style>
+<br>
+<br>
+<center><b>
+User Name*: <input type="text" name="name"> <br><br><br>
+Password*: <input type="password" name="password"><br><br><br>
+Email-id*: <input type="text" name="email"> <br><br><br>
+Phone no*:  <input type="number" name="phoneno"><br><br><br>
+
+<input type="submit" onmouseover="return validateForm()" value="Register">
+</form>
+
+<p>Click <a href = "KP.html">here</a> to login.</p>
+</center></b>
+</body>
+<html>

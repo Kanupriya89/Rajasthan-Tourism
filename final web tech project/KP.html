@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<div id="menu">
+<ul>
+<li><a href="newregister.html">BACK</a></li>
+<script type="text/javascript">
+function validateForm() {
+
+var x=document.forms["myForm"]["name"].value;
+if (x==null || x=="")
+ {
+  alert("Name must be filled out");
+  return false;
+ }
+
+var y=document.forms["myForm"]["Contact No"].value;
+if (y==null || y=="") {
+  alert("Contact No must be filled out");
+  return false;
+}
+var z=document.forms["myForm"]["serial"].value;
+if (z==null || z=="") {
+  alert("serial id must be filled out");
+  return false;
+}
+var a=document.forms["myForm"]["address"].value;
+if (a==null || a=="") {
+  alert("address must be filled out");
+  return false;
+}
+var b=document.forms["myForm"]["floors"].value;
+if (b==null || b=="") {
+  alert("No of floors must be filled out");
+  return false;
+}
+</script>
+</head>
+
+<body align="center">
+<head><bold>LOGIN</bold></head>
+
+
+<form name="myForm" action="demo_form.asp" onsubmit="return validateForm()" method="post">
+<style>body {background-image:url(back22.jpg); background-size: cover; background-position: top center; background-repeat: no-repeat; background-attachment: fixed}
+
+
+input[type=submit] {
+    width: 25%;
+    background-color:black;
+    color: pink;
+    padding: 8px 8px;
+    margin: 8px 0;
+    border:solid;
+    border-radius:2px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color:purple;
+}
+
+
+</style>
+Name*: <input type="text" name="name"> <br><br>
+Contact No*: <input type="number" name="Contact No"><br><br>
+Serial_id*: <input type="text" name="serial"> <br><br>
+Address*: <input type="text" name="address"><br><br>
+No. of floors*: <input type="number" name="floors"><br><br>
+<input type="submit" value="Submit">
+</form>
+</body>
+<html>
